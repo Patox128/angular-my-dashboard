@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common';
   styles: ``
 })
 export class TitleComponent {
-
+  @Input({required: true}) title!: string;
+  @Input({transform: booleanAttribute}) withShadow:boolean = false;
 }
